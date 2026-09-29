@@ -1,7 +1,5 @@
 # Respuestas — Ejercitario Unidad 01
 
-> Completen cada pregunta debajo de su enunciado. Pueden borrar este bloque de instrucciones una vez que empiecen.
-
 ---
 
 ## Tema 1 · Ingeniería de software: una visión previa
