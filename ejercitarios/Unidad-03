@@ -15,12 +15,20 @@ que el sistema está funcionando y se logra mantener estable.
 
 **2. Explica la diferencia entre proceso, metodología y modelo de proceso, con un ejemplo de cada uno.**
 
-_Respuesta:_
+_Respuesta:_ PROCESO: es el concepto general, el conjunto de actividades necesarias para desarrollar software (el qué se hace). EJEMPLO: el marco genérico de Pressman (comunicación, planeación, modelado, construcción y despliegue).
+MODELO DE PROCESO: es una representación abstracta que define el orden y el flujo en que se organizan esas actividades. EJEMPLO: el modelo en cascada, donde cada fase se completa antes de pasar a la siguiente.
+METODOLOGÍA: es la aplicación concreta y detallada de un modelo, con roles, prácticas, técnicas y entregables definidos (el cómo se hace). EJEMPLO: Scrum, que define sprints, roles (Product Owner, Scrum Master, equipo) y artefactos como el backlog.
 
 
 **3. Enumera las cinco actividades genéricas del marco de trabajo de Pressman.**
 
-_Respuesta:_
+_Respuesta:_ 
+
+1- Comunicación
+2- Planeación
+3- Modelado
+4- Construcción
+5- Despliegue
 
 
 **4. Menciona dos actividades "de la sombrilla" y explica por qué se dice que "cubren" todo el proceso.**
