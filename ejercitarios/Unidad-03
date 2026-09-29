@@ -181,3 +181,7 @@ La diferencia está en qué parte del proceso cubren: las Upper-CASE trabajan so
 **16. Reflexión final:** de los modelos de proceso vistos en esta unidad, ¿cuál elegirían para un proyecto personal? Justifiquen su elección considerando el tamaño del proyecto, el tiempo disponible y el nivel de certeza sobre los requisitos.
 
 _Respuesta:_
+
+Para un proyecto personal elegiría el modelo incremental, por ejemplo para el sistema de facturación que estoy armando para mi emprendimiento. Es un proyecto chico que desarrollo yo solo, así que no hace falta algo pesado como el espiral. 
+Como mi tiempo está repartido entre la facultad y el negocio, me conviene tener rápido una primera versión útil (facturas simples) y después ir sumando el resto. Además, los requisitos no están del todo claros desde el inicio 
+y van apareciendo con el uso, por eso descartaría cascada. Con el incremental puedo usar el sistema desde temprano y adaptarlo en cada versión.
