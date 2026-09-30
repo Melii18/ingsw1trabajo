@@ -13,23 +13,31 @@ layout: default
 
 ## 1. Presentación del proyecto
 
-**Nombre del sistema:** [nombre]
+**Nombre del sistema:** [Bibliostock]
 
 **Integrantes del grupo:**
 
 | Nombre | Rol |
 |---|---|
-| [Nombre 1] | [rol] |
-| [Nombre 2] | [rol] |
-| [Nombre 3] | [rol] |
+| [Melisa Tillner] | [Coordinación y contacto con el cliente / documentación] |
+| [Cesar Pereira] | [Analista: requisitos y modelado] |
+| [Marcelo Benitez] | [Responsable técnico: repositorio, sitio y tecnología] |
 
-**Usuario / cliente real:** [nombre y breve descripción del usuario o cliente para quien se desarrolla el sistema]
+**Usuario / cliente real:** [Biblioteca Municipal de la ciudad de Piribebuy (Departamento de Cordillera, Paraguay), institución pública que resguarda y ofrece libros a la comunidad. Actualmente no cuenta con ningún sistema informático y gestiona su acervo con registros en pequeñas tarjetas. Referente: Jaime Valenzuela]
 
 ---
 
 ## 2. Definición del problema
 
-[Describir la situación actual del usuario/cliente y la problemática concreta que motiva el desarrollo del sistema. ¿Qué hace hoy el usuario para resolver esto? ¿Qué dificultades enfrenta?]
+[La Biblioteca Municipal de Piribebuy registra la información de cada libro en pequeñas tarjetas físicas, que se consultan y actualizan a mano. No existe ningún sistema de control de stock.
+
+Para saber si tienen un libro, el personal debe revisar las tarjetas una por una. Las dificultades que enfrenta son:
+
+Búsqueda lenta: encontrar un libro por título, autor o tema lleva tiempo.
+Stock desconocido: no se sabe con rapidez cuántos ejemplares existen, cuántos están disponibles y cuántos prestados.
+Riesgo de pérdida: las tarjetas pueden extraviarse o deteriorarse, y no hay copia de respaldo.
+Errores e inconsistencias: la escritura manual favorece duplicados y datos desactualizados o incompletos.
+Sin trazabilidad ni estadísticas: es difícil saber quién tiene un libro, qué préstamos están vencidos o qué libros son los más pedidos.]
 
 ---
 
