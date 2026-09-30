@@ -5,7 +5,7 @@ Este repositorio contiene el análisis y diseño del sistema **BiblioStock**, de
 
 El sitio publicado en GitHub Pages es la entrega oficial del trabajo. **No se envían archivos impresos ni copias por otros medios.**
 
-🔗 **Sitio publicado:** `https://[usuario-o-organizacion].github.io/[nombre-del-repositorio]/`
+🔗 **Sitio publicado:** `(https://melii18.github.io/ingsw1trabajo/)`
 
 ---
 
