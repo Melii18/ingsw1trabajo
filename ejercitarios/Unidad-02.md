@@ -121,6 +121,8 @@ _(Arrastrá la imagen a este archivo desde el editor de GitHub para insertarla)_
 _Respuesta:_ Elegiría una simulación cuando sea necesario observar cómo se comporta un sistema a lo largo del tiempo y bajo diferentes situaciones. 
 Por ejemplo, antes de implementar un sistema de atención en un banco, se podría simular la llegada de clientes y los tiempos de atención para determinar cuántas cajas serían necesarias.
 
+También se puede utilizar una simulación cuando un sistema es demasiado complejo o costoso para probarlo directamente en la realidad. Por ejemplo, una empresa podría simular el funcionamiento de su sistema de entregas para analizar diferentes cantidades de pedidos, tiempos y rutas, y así encontrar una forma más eficiente de organizar las entregas antes de aplicarla realmente.
+
 ---
 
 ## Tema 4 · El proceso de Ingeniería de Sistemas
