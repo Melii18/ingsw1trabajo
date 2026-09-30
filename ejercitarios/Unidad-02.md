@@ -115,6 +115,7 @@ La vista de comportamiento muestra cómo actúa el sistema y cómo se desarrolla
 
 _(Arrastrá la imagen a este archivo desde el editor de GitHub para insertarla)_
 
+<img width="716" height="615" alt="img1" src="https://github.com/user-attachments/assets/cfb5c702-b22b-4ce2-a81f-69bc8c89167a" />
 
 **13. ¿En qué situación elegirías usar simulación en lugar de un modelo estático? Da un ejemplo concreto.**
 
@@ -129,10 +130,9 @@ También se puede utilizar una simulación cuando un sistema es demasiado comple
 
 **14. Explica la diferencia entre Ingeniería de procesos de negocio e Ingeniería de producto, dando un ejemplo de cada una.**
 
-_Respuesta:_ La Ingeniería de procesos de negocio se enfoca en analizar y mejorar los procesos que realiza una organización para alcanzar sus objetivos. Por ejemplo, mejorar el proceso de registro y atención de clientes de un banco.
+_Respuesta:_ La Ingeniería de procesos de negocio se enfoca en analizar, organizar y mejorar las actividades que realiza una organización para alcanzar sus objetivos de manera más eficiente. Busca identificar problemas, reducir tiempos o costos y mejorar la forma en que se realizan las tareas. Por ejemplo, en un banco se podría analizar el proceso de registro y atención de clientes para reducir las esperas y hacer que la atención sea más rápida y ordenada.
 
-La Ingeniería de producto se enfoca en diseñar y desarrollar un producto específico que satisfaga determinadas necesidades. Por ejemplo, desarrollar una aplicación móvil para que los clientes puedan consultar sus cuentas y realizar operaciones.
-
+Por otro lado, la Ingeniería de producto se enfoca en diseñar, desarrollar y mantener un producto específico que responda a las necesidades de los usuarios. En este caso, se trabaja directamente sobre las características, funciones y calidad del producto. Por ejemplo, desarrollar una aplicación móvil para que los clientes de un banco puedan consultar sus cuentas, realizar transferencias y revisar sus movimientos.
 
 **15. Ordena numéricamente (1 a 4) los siguientes pasos genéricos del proceso de Ingeniería de Sistemas, según la secuencia vista en clase.**
 
