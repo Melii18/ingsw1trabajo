@@ -26,9 +26,9 @@ La ingeniería de requisitos es todo el proceso utilizado para descubrir, analiz
 
 | Tipo de requerimiento | Descripción |
 |---|---|
-| A. Funcional | __2_ |
-| B. No funcional | _3__ |
-| C. Del dominio | _1__ |
+| A. Funcional | _2_ |
+| B. No funcional | _3_ |
+| C. Del dominio | _1_ |
 
 1. Proviene de las reglas o restricciones propias del área o dominio de negocio.
 2. Describe una función o servicio concreto que el sistema debe realizar.
@@ -55,15 +55,17 @@ _Respuesta:_
 
 | Característica | Pregunta que permite verificarla |
 |---|---|
-| Correcto | |
-| No ambiguo | |
-| Completo | |
-| Verificable | |
+| Correcto | ¿Este requerimiento refleja realmente lo que la biblioteca (el cliente) necesita? |
+| No ambiguo | 	¿Se puede interpretar de una sola forma, o dos personas podrían entenderlo distinto? |
+| Completo | 	¿Incluye toda la información necesaria (casos, datos, condiciones) o falta algo para poder implementarlo? |
+| Verificable | 	¿Se puede diseñar una prueba concreta que demuestre si el sistema lo cumple o no? |
 
 **7. Tomá el requerimiento "El sistema debe ser rápido" y reescribilo de forma que cumpla con las características de un buen requerimiento vistas en clase.**
 
 _Respuesta:_
 
+"El sistema debe mostrar el resultado de la búsqueda de un libro por título, autor o ISBN en menos de 2 segundos, con un catálogo de hasta 20.000 libros y hasta 10 usuarios consultando al mismo tiempo."
+Así el requerimiento ya no es ambiguo ("rápido" puede significar cualquier cosa), dice exactamente qué operación se mide y en qué condiciones, y se puede verificar con una prueba cronometrando la búsqueda.
 
 ---
 
@@ -73,14 +75,20 @@ _Respuesta:_
 
 _Respuesta:_
 
+1- Descubrimiento de requerimientos: interactuar con los interesados (bibliotecarios, director, socios) para conocer sus necesidades.
+2- Clasificación y organización: agrupar los requerimientos relacionados, por ejemplo en "gestión de libros", "préstamos y devoluciones" y "reportes".
+3- Priorización y negociación: ordenar los requerimientos por importancia y resolver conflictos entre los distintos interesados.
+4- Especificación (documentación): documentar los requerimientos para usarlos en la siguiente vuelta del ciclo.
+
+Es un ciclo, así que estas etapas se repiten varias veces hasta que los requerimientos quedan claros.
 
 **9. Ejercicio de relación** (completen con el número que corresponda a cada letra):
 
 | Técnica de obtención | Situación en que conviene usarla |
 |---|---|
-| A. Entrevistas | ___ |
-| B. Observación | ___ |
-| C. Talleres / workshops | ___ |
+| A. Entrevistas | _3_ |
+| B. Observación | _1_ |
+| C. Talleres / workshops | _2_ |
 
 1. Cuando el usuario no puede verbalizar fácilmente lo que necesita.
 2. Cuando hay varios interesados con visiones distintas que negociar.
@@ -94,10 +102,10 @@ _Respuesta:_
 
 | Técnica | Ventaja | Limitación |
 |---|---|---|
-| Lenguaje natural estructurado | | |
-| Casos de uso | | |
-| Historias de usuario | | |
-| Diagramas (UML) | | |
+| Lenguaje natural estructurado | Es fácil de entender para todos, incluso para los bibliotecarios, y con plantillas se mantiene cierto orden. | Sigue siendo lenguaje natural, así que puede tener ambigüedades y quedar muy extenso. |
+| Casos de uso | 	Muestran claramente la interacción entre el usuario y el sistema paso a paso, por ejemplo el caso "Registrar préstamo" con sus flujos alternativos (libro sin stock, socio con deuda). | Pueden volverse muy detallados y difíciles de mantener, y no sirven bien para requerimientos no funcionales. |
+| Historias de usuario | Son cortas y centradas en el usuario. Ej.: "Como bibliotecario, quiero ver qué libros están con la devolución vencida para poder reclamarlos". | Tienen poco detalle, por lo que dependen de la comunicación constante con el cliente y de los criterios de aceptación. |
+| Diagramas (UML) | Representan visualmente la estructura y el comportamiento del sistema (por ejemplo, un diagrama de clases con Libro, Ejemplar, Socio y Préstamo), lo que ayuda a ver relaciones que en texto no se notan. | Requieren conocimientos técnicos para entenderlos, así que no siempre sirven para validar con el cliente. |
 
 ---
 
