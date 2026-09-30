@@ -132,6 +132,7 @@ Durante ese tiempo pueden aparecer errores, cambiar las necesidades de los usuar
 Por ejemplo, un sistema de facturación puede tardar unos meses en desarrollarse, pero después puede utilizarse durante muchos años. En ese tiempo pueden cambiar las leyes de facturación, 
 actualizarse los servidores o solicitarse nuevas funciones. Todos esos cambios hacen que el mantenimiento termine costando más que el desarrollo inicial.
 
+Además, el mantenimiento no consiste solamente en corregir errores, sino también en adaptar y mejorar el software para que continúe siendo útil y seguro. A medida que pasa el tiempo, pueden aumentar la cantidad de usuarios y los datos que maneja el sistema, lo que requiere optimizaciones y actualizaciones. Por esta razón, mantener un software funcionando correctamente durante muchos años puede representar un costo mayor que su desarrollo inicial.
 
 ---
 
