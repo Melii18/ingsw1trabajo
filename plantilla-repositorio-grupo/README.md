@@ -1,8 +1,7 @@
-# [Nombre del Sistema] — Trabajo Práctico Integrador
+# BiblioStock — Trabajo Práctico Integrador
 
-> Plantilla base para el repositorio del grupo. Reemplacen todo el texto entre `[corchetes]` por la información real de su proyecto.
 
-Este repositorio contiene el análisis y diseño del sistema **[Nombre del Sistema]**, desarrollado como Trabajo Práctico Integrador de la asignatura **Ingeniería de Software**.
+Este repositorio contiene el análisis y diseño del sistema **BiblioStock**, desarrollado como Trabajo Práctico Integrador de la asignatura **Ingeniería de Software**.
 
 El sitio publicado en GitHub Pages es la entrega oficial del trabajo. **No se envían archivos impresos ni copias por otros medios.**
 
@@ -14,13 +13,13 @@ El sitio publicado en GitHub Pages es la entrega oficial del trabajo. **No se en
 
 | Nombre completo | Rol / Responsabilidad principal | Usuario de GitHub |
 |---|---|---|
-| [Nombre 1] | [ej. Análisis de requisitos] | [@usuario1] |
-| [Nombre 2] | [ej. Modelado y diagramas] | [@usuario2] |
-| [Nombre 3] | [ej. Diseño técnico y documentación] | [@usuario3] |
+| Melisa Tillner | 	Coordinación y contacto con el cliente | [@melii18] |
+| Marcelo Benitez | Análisis de requisitos y modelado | [@themarce001] |
+| Cesar Pereira | 	Responsable técnico (repositorio y sitio) | [@by-rafael] |
 
 ## Usuario / cliente real
 
-**[Nombre del usuario o cliente]** — [breve descripción de quién es y por qué necesita el sistema].
+**Biblioteca Municipal de Piribebuy** — Institución pública que resguarda y ofrece libros a la comunidad. Actualmente no cuenta con ningún sistema informático y gestiona su acervo con registros en pequeñas tarjetas.
 
 ## Metodología de diseño y desarrollo elegida
 
