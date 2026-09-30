@@ -150,6 +150,8 @@ _Respuesta:_
 
 Un patrón de proceso describe un problema que se repite en el desarrollo de software, el contexto en el que aparece y una solución que ya se probó que funciona. Sirve para reutilizar experiencias que salieron bien en lugar de improvisar cada vez.
 
+Permite establecer una forma ordenada de actuar ante situaciones conocidas durante un proyecto. Por ejemplo, si constantemente se presentan errores porque los requisitos cambian, el equipo puede establecer como solución revisar y aprobar los requisitos con el cliente antes de comenzar cada etapa de desarrollo. De esta manera, se reduce la posibilidad de repetir el mismo problema.
+
 Un ejemplo:
 
 Nombre: Validación temprana con prototipo.
@@ -169,6 +171,8 @@ Upper-CASE (alto nivel): ayudan en las primeras etapas del ciclo, como la planif
 Lower-CASE (bajo nivel): ayudan en las etapas finales, más cerca del código: implementación, generación de código, depuración, pruebas y mantenimiento. Por ejemplo, un editor de código con depurador o un sistema de control de versiones.
 
 La diferencia está en qué parte del proceso cubren: las Upper-CASE trabajan sobre modelos y diagramas, y las Lower-CASE sobre el código y el producto que se ejecuta. Las I-CASE (integradas) combinan las dos y cubren todo el ciclo.
+
+También se puede decir que las Upper-CASE se enfocan principalmente en organizar y representar el sistema antes de programarlo, mientras que las Lower-CASE se utilizan cuando el sistema ya está siendo construido o necesita ser revisado y mejorado. Por eso, las primeras ayudan a definir qué se va a desarrollar y las segundas ayudan a determinar cómo se desarrolla, prueba y mantiene.
 
 **15. Menciona tres herramientas que consideren CASE (de su propia experiencia o investigación) y clasifíquenlas según la categoría a la que pertenecen.**
 
