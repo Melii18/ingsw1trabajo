@@ -143,8 +143,16 @@ Desde una pantalla principal, el bibliotecario podrá buscar un libro y ver al i
 
 | Riesgo | Impacto | Estrategia de mitigación |
 |---|---|---|
-| [ej. Baja disponibilidad del cliente para validaciones] | [Alto/Medio/Bajo] | [cómo se planea mitigar] |
-| [Riesgo 2] | [Alto/Medio/Bajo] | [cómo se planea mitigar] |
+| Baja disponibilidad del cliente para reuniones y validaciones | Alto | Agendar reuniones con anticipación, consultar dudas por mensajería y dejar los acuerdos por escrito. |
+| Requisitos poco claros o cambiantes | Alto | Validar cada entrega con el cliente y documentar el alcance con claridad. |
+| Querer abarcar demasiado (multas, catálogo público, etc.) | Alto | Respetar la lista de "fuera de alcance" y priorizar requisitos. |
+| Poca experiencia informática del personal | Alto | Interfaz simple, manual breve y capacitación práctica. |
+| Falta de computadora o de conexión a internet en la biblioteca | Alto | Diseñar para funcionar en una sola PC o en red local. |
+| Tarjetas con datos incompletos o ilegibles | Medio | Definir campos mínimos obligatorios y permitir marcar datos pendientes. |
+| Gran volumen de tarjetas para migrar | Medio | Formulario de carga rápida o importación por planilla, en etapas. |
+| Tiempo limitado del equipo por otras materias | Medio | Dividir tareas por rol y trabajar con hitos y seguimiento en GitHub. |
+| Desequilibrio de participación en el grupo | Medio | Roles definidos y seguimiento mediante commits. |
+| Pérdida de datos del sistema | Alto | Respaldos periódicos y control de versiones del código.|
 
 ---
 
@@ -152,9 +160,9 @@ Desde una pantalla principal, el bibliotecario podrá buscar un libro y ver al i
 
 | Componente | Elección | Justificación breve |
 |---|---|---|
-| Lenguaje de programación | [ej. Python / Java / TypeScript] | [por qué] |
-| Framework | [ej. Django / Spring Boot / React] | [por qué] |
-| Base de datos | [ej. PostgreSQL / MongoDB] | [por qué] |
+| Lenguaje de programación | Java | Lenguaje robusto, conocido por el grupo y con abundante documentación. |
+| Framework | JSP y Servlets con patrón MVC (sobre Apache Tomcat) | Permite aplicar MVC con herramientas ya trabajadas en la carrera; es gratuito. |
+| Base de datos | MySQL (o MariaDB) | Gratuita, relacional y adecuada para catálogo, ejemplares y préstamos. |
 
 ---
 
