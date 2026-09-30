@@ -152,6 +152,8 @@ Un patrón de proceso describe un problema que se repite en el desarrollo de sof
 
 Permite establecer una forma ordenada de actuar ante situaciones conocidas durante un proyecto. Por ejemplo, si constantemente se presentan errores porque los requisitos cambian, el equipo puede establecer como solución revisar y aprobar los requisitos con el cliente antes de comenzar cada etapa de desarrollo. De esta manera, se reduce la posibilidad de repetir el mismo problema.
 
+También permite mejorar la planificación del proyecto, ya que el equipo puede anticiparse a situaciones conocidas y aplicar directamente una estrategia adecuada. Esto facilita la toma de decisiones y ayuda a mantener un desarrollo más organizado.
+
 Un ejemplo:
 
 Nombre: Validación temprana con prototipo.
