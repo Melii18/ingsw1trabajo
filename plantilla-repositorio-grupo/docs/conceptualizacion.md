@@ -45,13 +45,17 @@ Sin trazabilidad ni estadísticas: es difícil saber quién tiene un libro, qué
 
 **Objetivo general:**
 
-[Redactar en una frase el objetivo general del sistema.]
+Desarrollar un sistema web de control de stock que permita registrar, consultar y mantener actualizado el inventario de libros de la Biblioteca Municipal de Piribebuy, reemplazando el registro manual en tarjetas.
 
 **Objetivos específicos:**
 
-1. [Objetivo específico 1]
-2. [Objetivo específico 2]
-3. [Objetivo específico 3]
+1- Registrar el catálogo de libros (alta, modificación y baja) con sus datos bibliográficos, de modo que cada tarjeta actual pueda cargarse en el sistema.
+2- Controlar la cantidad de ejemplares de cada libro y su estado (disponible, prestado, dañado o perdido), mostrando el stock total y el disponible.
+3- Permitir búsquedas por título, autor, categoría o código, con resultados en pocos segundos.
+4- Registrar préstamos y devoluciones con fecha límite, guardando fecha, socio y ejemplar de cada movimiento.
+5- Generar reportes básicos: inventario, préstamos vencidos y libros más solicitados.
+6- Migrar al sistema la información existente en las tarjetas.
+7- Restringir el acceso mediante usuarios y roles, de modo que solo personal autorizado modifique datos.
 
 ---
 
