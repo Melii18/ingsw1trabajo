@@ -63,13 +63,24 @@ Desarrollar un sistema web de control de stock que permita registrar, consultar 
 
 **Incluye (dentro del alcance):**
 
-- [Funcionalidad / módulo 1]
-- [Funcionalidad / módulo 2]
+1- Gestión de libros (título, autor, editorial, año, ISBN, categoría, ubicación en estantería).
+2- Gestión de ejemplares y control de stock (cantidad, estado y disponibilidad).
+3- Gestión de autores, editoriales y categorías.
+4- Gestión de socios/lectores con datos básicos.
+5- Registro de préstamos y devoluciones.
+6- Búsqueda y consulta del catálogo.
+Reportes básicos.
+7- Usuarios y roles (administrador y bibliotecario).
+Carga inicial del catálogo (formulario ágil o importación 8- desde planilla).
 
-**No incluye (fuera de alcance):**
+No incluye (fuera de alcance):
 
-- [Aspecto explícitamente excluido 1]
-- [Aspecto explícitamente excluido 2]
+*Cobro de multas y gestión contable.
+*Préstamo interbibliotecario.
+*Catálogo en línea público para lectores externos.
+*Lector de código de barras o etiquetas RFID.
+*Aplicación móvil nativa.
+*Digitalización automática (OCR) de las tarjetas existentes.]
 
 ---
 
