@@ -72,9 +72,9 @@ Desarrollar un sistema web de control de stock que permita registrar, consultar 
 Reportes básicos.
 7- Usuarios y roles (administrador y bibliotecario).
 Carga inicial del catálogo (formulario ágil o importación 8- desde planilla).
-
+_______________________________
 No incluye (fuera de alcance):
-
+_______________________________
 *Cobro de multas y gestión contable.
 *Préstamo interbibliotecario.
 *Catálogo en línea público para lectores externos.
@@ -88,25 +88,30 @@ No incluye (fuera de alcance):
 
 | Interesado | Descripción | Interés en el proyecto |
 |---|---|---|
-| [Usuario final] | [quién es] | [qué espera del sistema] |
-| [Cliente] | [quién es] | [qué espera del sistema] |
-| [Administrador del sistema] | [quién es] | [qué espera del sistema] |
+| Usuario final: bibliotecario/a | Persona que atiende la biblioteca y opera el sistema a diario. | Registrar y buscar libros con rapidez, sin errores ni trabajo repetitivo. |
+| Cliente: director/a o responsable de la biblioteca | Autoridad a cargo de la institución. | Conocer el estado real del acervo y decidir compras y bajas con datos. |
+| Administrador del sistema | Persona designada para gestionar usuarios, configuración y respaldos. | Sistema estable, seguro y fácil de mantener. |
+| Municipalidad de Piribebuy | Entidad titular de la biblioteca. | Mejorar el servicio público y cuidar los bienes municipales. |
+| Lectores / socios | Comunidad que usa la biblioteca. | Encontrar libros más rápido y saber si están disponibles. |
+| Docente de la cátedra | Evaluador del trabajo. | Que se cumplan los criterios académicos. |
 
 ---
 
 ## 6. Justificación / viabilidad
 
-**Viabilidad técnica:** [¿el grupo cuenta con el conocimiento o puede adquirirlo?]
+**Viabilidad técnica:** El sistema es una aplicación web de gestión (altas, bajas, modificaciones, búsqueda y reportes) con tecnologías maduras y gratuitas. El grupo cuenta con formación en desarrollo web y bases de datos y puede adquirir lo que falte durante el cuatrimestre.
 
-**Viabilidad operativa:** [¿el usuario/cliente podrá usar y mantener el sistema?]
+**Viabilidad operativa:** El sistema replica la lógica actual de las tarjetas con pasos más cortos y una interfaz simple. Con una capacitación breve y un manual de uso, el personal podrá operarlo y mantenerlo. Se requiere que la biblioteca disponga de una computadora.
 
-**Viabilidad económica (alto nivel):** [¿es razonable en términos de costo/esfuerzo para el contexto del proyecto?]
+**Viabilidad económica (alto nivel):** El desarrollo es académico y sin costo para el cliente. Se usan herramientas de software libre y el costo de operación es bajo (una PC existente o un hosting básico). El beneficio esperado es el ahorro de horas de trabajo y la reducción de pérdidas de información y de material.
 
 ---
 
 ## 7. Visión general de la solución
 
-[Descripción breve, en lenguaje llano y sin detalle técnico, de cómo el grupo imagina que el sistema resolverá el problema planteado.]
+El grupo propone una aplicación web a la que el personal ingresa desde el navegador con usuario y contraseña. Cada tarjeta en papel pasa a ser un registro digital de un libro, con sus ejemplares asociados.
+
+Desde una pantalla principal, el bibliotecario podrá buscar un libro y ver al instante cuántos ejemplares hay y cuántos están disponibles, registrar nuevos libros o cambios de estado, anotar un préstamo o devolución y consultar reportes. Toda la información se guarda en un solo lugar, con copias de respaldo periódicas, y las tarjetas físicas quedan como archivo histórico.
 
 ---
 
@@ -114,9 +119,23 @@ No incluye (fuera de alcance):
 
 | Término | Definición |
 |---|---|
-| [Término 1] | [definición en el contexto del negocio] |
-| [Término 2] | [definición en el contexto del negocio] |
-| [Término 3] | [definición en el contexto del negocio] |
+| Acervo | Conjunto total de libros y materiales de la biblioteca. |
+| Tarjeta / ficha | Tarjeta de papel con los datos de un libro; es el sistema actual de registro. |
+| Libro (título) | Obra identificada por título y autor, sin importar cuántas copias haya. |
+| Ejemplar | Copia física individual de un libro, con su propio código y estado. |
+| Stock | Cantidad de ejemplares que posee la biblioteca de cada libro. |
+| Stock disponible | Ejemplares que están en la biblioteca y pueden prestarse. |
+| Estado del ejemplar | Situación de un ejemplar: disponible, prestado, dañado, perdido o dado de baja. |
+| ISBN | Código internacional que identifica un libro (puede no existir en libros antiguos). |
+| Categoría | Clasificación temática del libro (novela, historia, ciencias, infantil, etc.). |
+| Ubicación | Lugar de estantería donde se guarda un ejemplar. |
+| Socio / lector | Persona registrada que puede retirar libros en préstamo. |
+| Préstamo | Entrega temporal de un ejemplar a un socio con fecha de devolución. |
+| Devolución | Regreso del ejemplar a la biblioteca, que lo deja nuevamente disponible. |
+| Préstamo vencido | Préstamo cuya fecha de devolución ya pasó sin que se devolviera el ejemplar. |
+| Baja | Retiro de un ejemplar del inventario (pérdida, deterioro o donación). |
+| Bibliotecario | Usuario del sistema que realiza la operación diaria. |
+| Administrador | Usuario con control total del sistema: usuarios, configuración y respaldos. |
 
 ---
 
