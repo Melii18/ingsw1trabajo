@@ -114,7 +114,8 @@ _Respuesta:_
 
 **12. Explica la diferencia entre un prototipo desechable y un prototipo evolutivo, con un ejemplo de un proyecto donde usarías cada uno.**
 
-_Respuesta:_
+_Respuesta:_ Un prototipo desechable se crea para probar una idea o comprender mejor los requerimientos y luego se descarta. Por ejemplo, realizar una maqueta de una aplicación bancaria para mostrarle al cliente cómo serían las pantallas antes de comenzar el desarrollo real.
+Un prototipo evolutivo comienza como una versión básica y luego se va mejorando hasta convertirse en parte del sistema final. Por ejemplo, desarrollar una primera versión de una aplicación universitaria y agregar funcionalidades progresivamente según las necesidades de los usuarios.
 
 
 ---
@@ -144,8 +145,7 @@ _Respuesta:_
 
 **15. Explica con tus palabras qué es la trazabilidad de requerimientos y por qué es importante en un proyecto real.**
 
-_Respuesta:_
-
+_Respuesta:_ La trazabilidad de requerimientos consiste en poder relacionar cada requerimiento con su origen, diseño, implementación y pruebas correspondientes. Es importante porque permite saber de dónde surgió cada requisito y comprobar que realmente fue desarrollado y probado. También facilita realizar cambios en el proyecto sin perder de vista qué partes del sistema pueden verse afectadas.
 
 ---
 
@@ -153,7 +153,10 @@ _Respuesta:_
 
 **16. Menciona dos métricas que se pueden aplicar a los requerimientos de un proyecto y qué información le aporta cada una al equipo.**
 
-_Respuesta:_
+_Respuesta:_ 
+1. Cantidad de requerimientos: permite conocer cuántos requisitos tiene el proyecto y ayuda al equipo a estimar el tamaño y alcance del trabajo.
+
+2. Porcentaje de requerimientos validados: indica qué cantidad de los requisitos ya fueron revisados y aprobados por los interesados. Esto permite conocer el avance del proceso de definición de requisitos.
 
 
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
