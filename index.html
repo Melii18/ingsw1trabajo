@@ -1,62 +1,169 @@
-# BiblioStock — Trabajo Práctico Integrador
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BiblioStock · Trabajo Práctico Integrador</title>
+<style>
+  :root {
+    --bg: #f5f7fb; --card: #ffffff; --text: #1f2937; --muted: #6b7280;
+    --accent: #2563eb; --accent-soft: #dbeafe; --border: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a; --card: #1e293b; --text: #e5e7eb; --muted: #9ca3af;
+      --accent: #60a5fa; --accent-soft: #1e3a5f; --border: #334155;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+    color: #fff; text-align: center; padding: 3.5rem 1.25rem 3rem;
+  }
+  header h1 { margin: 0 0 .4rem; font-size: clamp(2rem, 6vw, 3rem); }
+  header p { margin: .25rem 0; opacity: .95; }
+  .badge {
+    display: inline-block; margin: .8rem .25rem 0; padding: .25rem .8rem;
+    border-radius: 999px; background: rgba(255,255,255,.2); font-size: .85rem;
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.5rem; margin-top: 1.25rem;
+  }
+  h2 { margin-top: 0; font-size: 1.35rem; }
+  .note {
+    background: var(--accent-soft); border-left: 4px solid var(--accent);
+    padding: .8rem 1rem; border-radius: 8px; margin: 1rem 0;
+  }
+  .btn {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: .55rem 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600;
+  }
+  a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--border); }
+  th { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .pill {
+    display: inline-block; padding: .15rem .6rem; border-radius: 999px;
+    font-size: .8rem; font-weight: 600;
+  }
+  .wip { background: #fef3c7; color: #92400e; }
+  .pending { background: var(--border); color: var(--muted); }
+  .done { background: #dcfce7; color: #166534; }
+  footer { text-align: center; color: var(--muted); padding: 1.5rem 1rem 2.5rem; font-size: .9rem; }
+</style>
+</head>
+<body>
 
+<header>
+  <h1>📚 BiblioStock</h1>
+  <p><strong>Trabajo Práctico Integrador · Ingeniería de Software</strong></p>
+  <p>Un sistema de control de stock para la Biblioteca Municipal de Piribebuy</p>
+  <span class="badge">Análisis y diseño de software</span>
+  <span class="badge">Cliente real</span>
+</header>
 
-Este repositorio contiene el análisis y diseño del sistema **BiblioStock**, desarrollado como Trabajo Práctico Integrador de la asignatura **Ingeniería de Software**.
+<main>
 
-El sitio publicado en GitHub Pages es la entrega oficial del trabajo. **No se envían archivos impresos ni copias por otros medios.**
+  <section>
+    <h2>👋 Bienvenida</h2>
+    <p>Este sitio contiene el <strong>análisis y diseño del sistema BiblioStock</strong>, desarrollado como Trabajo Práctico Integrador de la asignatura <strong>Ingeniería de Software</strong>.</p>
+    <div class="note">📌 Este sitio es la <strong>entrega oficial</strong> del trabajo. No se envían archivos impresos ni copias por otros medios.</div>
+    <a class="btn" href="https://github.com/[usuario-o-organizacion]/ingsw1trabajo">Ver repositorio en GitHub</a>
+  </section>
 
-🔗 **Sitio publicado:** `https://[usuario-o-organizacion].github.io/[nombre-del-repositorio]/`
+  <section>
+    <h2>🗂️ Entregas</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Entrega</th><th>Estado</th><th>Enlace</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Conceptualización</strong></td>
+            <td><span class="pill wip">🚧 En elaboración</span></td>
+            <td><a href="conceptualizacion.html">Ver documento</a></td>
+          </tr>
+          <tr>
+            <td><strong>2. Análisis</strong></td>
+            <td><span class="pill pending">🔲 Pendiente</span></td>
+            <td>Próximamente</td>
+          </tr>
+          <tr>
+            <td><strong>3. Diseño</strong></td>
+            <td><span class="pill pending">🔲 Pendiente</span></td>
+            <td>Próximamente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:0">Cada nueva entrega se suma a este sitio, conservando las anteriores.</p>
+  </section>
 
----
+  <section>
+    <h2>🏛️ Usuario / cliente real</h2>
+    <p><strong>Biblioteca Municipal de Piribebuy</strong>: institución pública que resguarda y ofrece libros a la comunidad.</p>
+    <p>Hoy no cuenta con ningún sistema informático y gestiona su acervo con registros en <strong>pequeñas tarjetas</strong>. BiblioStock nace para ordenar ese inventario, agilizar las búsquedas y saber en todo momento qué libros hay y cuáles están disponibles.</p>
+  </section>
 
-## Integrantes del grupo
+  <section>
+    <h2>👩‍💻 Integrantes del grupo</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Nombre completo</th><th>Rol / Responsabilidad</th><th>GitHub</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Melisa Tillner</strong></td>
+            <td>Coordinación y contacto con el cliente</td>
+            <td><a href="https://github.com/melii18">@melii18</a></td>
+          </tr>
+          <tr>
+            <td><strong>Marcelo Benitez</strong></td>
+            <td>Análisis de requisitos y modelado</td>
+            <td><a href="https://github.com/themarce001">@themarce001</a></td>
+          </tr>
+          <tr>
+            <td><strong>Cesar Pereira</strong></td>
+            <td>Responsable técnico (repositorio y sitio)</td>
+            <td><a href="https://github.com/by-rafael">@by-rafael</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-| Nombre completo | Rol / Responsabilidad principal | Usuario de GitHub |
-|---|---|---|
-| Melisa Tillner | 	Coordinación y contacto con el cliente | [@melii18] |
-| Marcelo Benitez | Análisis de requisitos y modelado | [@themarce001] |
-| Cesar Pereira | 	Responsable técnico (repositorio y sitio) | [@by-rafael] |
+  <section>
+    <h2>🧭 Metodología de diseño y desarrollo</h2>
+    <p><strong>Design Thinking + UML, con iteraciones cortas y validación con el cliente.</strong></p>
+    <div class="grid">
+      <div>
+        <strong>💡 Design Thinking</strong>
+        <p>Entendemos cómo trabaja hoy la biblioteca y qué necesita realmente el personal, mediante entrevistas y observación, antes de definir qué construir.</p>
+      </div>
+      <div>
+        <strong>📐 UML</strong>
+        <p>Un lenguaje estándar para modelar el sistema (casos de uso, modelo de dominio, clases y secuencia) de forma clara y trazable.</p>
+      </div>
+      <div>
+        <strong>🔁 Iteraciones cortas</strong>
+        <p>Cada entrega se valida con el cliente antes de avanzar a la siguiente, para corregir a tiempo y evitar malentendidos.</p>
+      </div>
+    </div>
+    <p>Elegimos esta combinación porque el sistema tiene un alcance acotado, el equipo es de tres integrantes y el cliente es accesible. Además, quienes usarán el sistema no tienen experiencia informática previa, por lo que poner al usuario en el centro es clave.</p>
+  </section>
 
-## Usuario / cliente real
+</main>
 
-**Biblioteca Municipal de Piribebuy** — Institución pública que resguarda y ofrece libros a la comunidad. Actualmente no cuenta con ningún sistema informático y gestiona su acervo con registros en pequeñas tarjetas.
+<footer>
+   <strong>BiblioStock</strong> · Ingeniería de Software
+</footer>
 
-## Metodología de diseño y desarrollo elegida
-
-[Nombre de la metodología, por ejemplo: RUP, Scrum aplicado al modelado, Design Thinking + UML, etc.]
-
-[Breve justificación de por qué el grupo eligió esta metodología para este proyecto.]
-
----
-
-## Entregas
-
-| Entrega | Estado | Enlace |
-|---|---|---|
-| 1. Conceptualización | 🔲 Pendiente / ✅ Entregado | [Ver documento](docs/conceptualizacion.md) |
-| 2. Análisis | 🔲 Pendiente / ✅ Entregado | [Ver documento](docs/analisis.md) |
-| 3. Diseño | 🔲 Pendiente / ✅ Entregado | [Ver documento](docs/diseno.md) |
-
-## Estructura del repositorio
-
-```
-/docs           → contenido publicado en GitHub Pages (este es el sitio oficial de entrega)
-  ├─ index.md          → página principal del sitio
-  ├─ conceptualizacion.md
-  ├─ analisis.md
-  └─ diseno.md
-/diagramas      → imágenes o archivos fuente de los diagramas (UML, mockups, etc.)
-/src            → código fuente, si el grupo decide avanzar con una implementación
-```
-
-## Cómo publicar este sitio en GitHub Pages
-
-1. Suban este repositorio a GitHub (público, o privado con acceso otorgado a la cátedra).
-2. Vayan a **Settings → Pages**.
-3. En **Source**, seleccionen la rama `main` (o `master`) y la carpeta **/docs**.
-4. Guarden. GitHub publicará el sitio en `https://[usuario].github.io/[repositorio]/` en unos minutos.
-5. Verifiquen que `docs/index.md` se muestre correctamente como página principal.
-6. Actualicen el enlace del sitio arriba en este README y entréguenlo a la cátedra antes de la fecha límite de cada entrega.
-
-> 💡 Tip: cada vez que hagan `push` a la rama publicada, el sitio se actualiza automáticamente. No es necesario volver a configurar nada en las siguientes entregas.
-
+</body>
+</html>
