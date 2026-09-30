@@ -8,13 +8,15 @@
 
 **1. Define en tus propias palabras qué es la ingeniería de requerimientos.**
 
-_Respuesta:_
+_Respuesta:_ La ingeniería de requerimientos es el proceso de identificar, analizar, documentar y validar las necesidades que debe cumplir un sistema. Su objetivo es entender qué necesita realmente el usuario y convertir esas necesidades en requisitos claros para que el equipo pueda desarrollar correctamente el software.
 
 
 **2. Explica la diferencia entre "requerimiento", "especificación de requisitos" e "ingeniería de requisitos", con un ejemplo de cada uno.**
 
-_Respuesta:_
+_Respuesta:_ Un requerimiento es una necesidad o condición que el sistema debe cumplir. Por ejemplo: “El sistema debe permitir registrar nuevos estudiantes”.
+La especificación de requisitos es el documento donde se detallan de manera organizada los requisitos que debe cumplir el sistema. Por ejemplo, especificar los datos que se deben ingresar para registrar a un estudiante, como nombre, apellido, documento y carrera.
 
+La ingeniería de requisitos es todo el proceso utilizado para descubrir, analizar, documentar y validar esos requisitos. Por ejemplo, entrevistar a los funcionarios de una universidad para conocer qué necesitan del sistema de inscripción.
 
 ---
 
@@ -24,9 +26,9 @@ _Respuesta:_
 
 | Tipo de requerimiento | Descripción |
 |---|---|
-| A. Funcional | ___ |
-| B. No funcional | ___ |
-| C. Del dominio | ___ |
+| A. Funcional | __2_ |
+| B. No funcional | _3__ |
+| C. Del dominio | _1__ |
 
 1. Proviene de las reglas o restricciones propias del área o dominio de negocio.
 2. Describe una función o servicio concreto que el sistema debe realizar.
@@ -36,9 +38,9 @@ _Respuesta:_
 
 | Aspecto | Requerimientos de usuario | Requerimientos de sistema |
 |---|---|---|
-| Audiencia principal | | |
-| Nivel de detalle | | |
-| Lenguaje utilizado | | |
+| Audiencia principal |Usuarios y clientes |Desarrolladores y equipo técnico |
+| Nivel de detalle |General y de alto nivel |Detallado y específico |
+| Lenguaje utilizado |Lenguaje natural y fácil de entender |Lenguaje más técnico y preciso |
 
 **5. Elegí un sistema que conozcas (una app, una plataforma, un sistema de tu universidad o trabajo) y da un ejemplo propio de un requerimiento funcional y uno no funcional para ese mismo sistema.**
 
