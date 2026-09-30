@@ -115,7 +115,12 @@ Es un ciclo, así que estas etapas se repiten varias veces hasta que los requeri
 
 _Respuesta:_
 
+Una especificación formal describe los requerimientos usando notaciones matemáticas (por ejemplo, lógica, teoría de conjuntos o lenguajes como Z o B), en lugar de lenguaje natural. Como todo queda definido de forma precisa, se eliminan las ambigüedades y se puede demostrar matemáticamente si el sistema cumple o no con lo especificado.
 
+El problema es que es costosa, lleva mucho tiempo y necesita gente especializada, por eso solo se justifica en sistemas críticos, donde un error puede causar pérdidas de vidas, daños graves o pérdidas económicas muy grandes: sistemas médicos, aeronáuticos, ferroviarios, nucleares o bancarios.
+
+En el sistema de control de stock de la biblioteca no se justificaría, porque un error (por ejemplo, un stock mal calculado) se puede corregir sin consecuencias graves, y el costo de una especificación formal sería mucho mayor que el beneficio.
+Ejemplo hipotético donde sí la usaría: el software que controla una bomba de insulina, que calcula y aplica la dosis al paciente. Usaría una especificación formal para definir exactamente cuándo se puede aplicar una dosis, cuál es la dosis máxima permitida y qué pasa si falla un sensor, porque un error en esa lógica podría poner en riesgo la vida del paciente.
 ---
 
 ## Tema 7 · Prototipado de los requerimientos
@@ -134,6 +139,9 @@ Un prototipo evolutivo comienza como una versión básica y luego se va mejorand
 
 _Respuesta:_
 
+Desarrollo con lenguajes de alto nivel / dinámicos: usar lenguajes y entornos que permiten programar rápido, como Python, JavaScript o PHP, que tienen muchas funciones ya incorporadas y no requieren tanto código. Así se llega a algo funcional en poco tiempo, aunque no esté optimizado. Por ejemplo, armar en pocas horas una página que permita cargar libros y ver el stock.
+
+Ensamblaje de componentes y aplicaciones (reutilización): armar el prototipo juntando componentes que ya existen (librerías, frameworks, plantillas, APIs), en lugar de programar todo desde cero. Por ejemplo, usar Bootstrap para la interfaz y una API pública de libros (como Open Library) para completar automáticamente el título y el autor a partir del ISBN. También se pueden usar prototipos en papel o wireframes (con herramientas como Figma), que muestran solo la interfaz sin lógica y sirven para validar pantallas muy rápido con los bibliotecarios.
 
 ---
 
@@ -143,9 +151,9 @@ _Respuesta:_
 
 | Técnica de validación | Qué tipo de problema detecta mejor |
 |---|---|
-| Revisiones de requisitos | |
-| Prototipado | |
-| Generación de casos de prueba | |
+| Revisiones de requisitos | Errores en el documento: requerimientos ambiguos, incompletos, contradictorios entre sí o que no cumplen los estándares. Ej.: un requisito dice que el préstamo dura 15 días y otro dice 7. |
+| Prototipado | Requerimientos que no reflejan lo que el usuario realmente necesita, o problemas de usabilidad que solo se notan al ver el sistema funcionando. Ej.: el bibliotecario ve que para prestar un libro tiene que pasar por demasiadas pantallas. |
+| Generación de casos de prueba | Requerimientos que no se pueden verificar o que son demasiado vagos; si no se puede escribir una prueba para un requerimiento, significa que está mal definido. Ej.: "El sistema debe avisar cuando haya poco stock" no dice cuánto es "poco". |
 
 ---
 
@@ -170,3 +178,11 @@ _Respuesta:_
 **17. Reflexión final:** pensá en un proyecto de software (hipotético o real). Describí qué técnica de obtención, qué técnica de especificación y qué técnica de validación usarías para sus requerimientos, y justificá tu elección considerando el tipo de proyecto y de usuarios.
 
 _Respuesta:_
+
+Para el sistema de control de stock de una biblioteca usaría:
+
+Obtención: entrevistas y observación. Con entrevistas al director y a los bibliotecarios entendería qué necesitan, y observándolos trabajar vería cómo registran hoy los libros y los préstamos, incluso los pasos que no mencionan porque ya los hacen de memoria.
+
+Especificación: casos de uso. El sistema tiene procesos bien definidos (alta de libros, préstamo, devolución, control de stock), y los casos de uso permiten describir cada uno paso a paso, incluyendo situaciones como un libro sin stock o un socio con devoluciones pendientes.
+
+Validación: prototipado. Los bibliotecarios no son técnicos, así que la mejor forma de validar es mostrarles las pantallas y que prueben registrar un préstamo, para confirmar que el sistema se adapta a su forma de trabajar.
