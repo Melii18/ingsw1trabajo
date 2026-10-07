@@ -79,6 +79,17 @@
     line-height: 1;
     letter-spacing: .01em;
   }
+  .title-row {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(.7rem, 2.5vw, 1.2rem);
+  }
+  .book {
+    width: clamp(52px, 11vw, 78px);
+    height: auto;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
   .ornament {
     width: 72px;
     height: 1px;
@@ -239,7 +250,15 @@
 <header>
   <div class="masthead">
     <p class="eyebrow">Trabajo Práctico Integrador &middot; Ingeniería de Software</p>
-    <h1>BiblioStock</h1>
+    <div class="title-row">
+      <svg class="book" viewBox="0 0 70 52" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true">
+        <path d="M35 12 C26 6 14 5 4 7 V44 C14 42 26 43 35 49 Z"/>
+        <path d="M35 12 C44 6 56 5 66 7 V44 C56 42 44 43 35 49 Z"/>
+        <path d="M10 15 C17 14 24 15 30 18 M10 22 C17 21 24 22 30 25 M10 29 C17 28 24 29 30 32" stroke-width="1"/>
+        <path d="M40 18 C46 15 53 14 60 15 M40 25 C46 22 53 21 60 22 M40 32 C46 29 53 28 60 29" stroke-width="1"/>
+      </svg>
+      <h1>BiblioStock</h1>
+    </div>
     <div class="ornament" aria-hidden="true"></div>
     <p class="lead">Sistema de control de stock para la Biblioteca Municipal de Piribebuy</p>
   </div>
