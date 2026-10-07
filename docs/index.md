@@ -27,9 +27,9 @@ Sistema web de control de stock para la Biblioteca Municipal de Piribebuy, que r
 
 | Entrega | Descripción | Enlace |
 |---|---|---|
-| 📋 Entrega 1 | Conceptualización — el problema, el propósito y el alcance del proyecto | [Ir a Conceptualización](conceptualizacion.md) |
-| 🔍 Entrega 2 | Análisis — requisitos, casos de uso y modelo de dominio | [Ir a Análisis](analisis.md) |
-| 🛠️ Entrega 3 | Diseño — arquitectura, clases de diseño y base de datos | [Ir a Diseño](diseno.md) |
+| Entrega 1 | Conceptualización — el problema, el propósito y el alcance del proyecto | [Ir a Conceptualización](conceptualizacion.md) |
+| Entrega 2 | Análisis — requisitos, casos de uso y modelo de dominio | [Ir a Análisis](analisis.md) |
+| Entrega 3 | Diseño — arquitectura, clases de diseño y base de datos | [Ir a Diseño](diseno.md) |
 
 ---
 
