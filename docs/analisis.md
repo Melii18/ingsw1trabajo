@@ -9,7 +9,7 @@ layout: default
 
 > *Qué debe hacer el sistema, desde la perspectiva del negocio y del usuario.*
 
-> 📌 **Versión inicial.** Este análisis parte de la información relevada en la [Conceptualización](conceptualizacion.md). Los valores marcados como *(a validar)* se confirmarán con el cliente antes de pasar al Diseño.
+> **Versión inicial.** Este análisis parte de la información relevada en la [Conceptualización](conceptualizacion.md). Los valores marcados como *(a validar)* se confirmarán con el cliente antes de pasar al Diseño.
 
 ---
 
