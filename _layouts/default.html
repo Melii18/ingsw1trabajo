@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}BiblioStock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ingsw1trabajo/assets/estilo.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="/ingsw1trabajo/">
+      <svg class="book" viewBox="0 0 70 52" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true">
+        <path d="M35 12 C26 6 14 5 4 7 V44 C14 42 26 43 35 49 Z"/>
+        <path d="M35 12 C44 6 56 5 66 7 V44 C56 42 44 43 35 49 Z"/>
+        <path d="M10 15 C17 14 24 15 30 18 M10 22 C17 21 24 22 30 25 M10 29 C17 28 24 29 30 32" stroke-width="1"/>
+        <path d="M40 18 C46 15 53 14 60 15 M40 25 C46 22 53 21 60 22 M40 32 C46 29 53 28 60 29" stroke-width="1"/>
+      </svg>
+      BiblioStock
+    </a>
+    <nav class="topnav">
+      <a href="/ingsw1trabajo/"{% if page.url == "/" %} class="activo"{% endif %}>Inicio</a>
+      <a href="/ingsw1trabajo/docs/conceptualizacion.html"{% if page.url contains "conceptualizacion" %} class="activo"{% endif %}>Conceptualización</a>
+      <a href="/ingsw1trabajo/docs/analisis.html"{% if page.url contains "analisis" %} class="activo"{% endif %}>Análisis</a>
+      <a href="/ingsw1trabajo/docs/diseno.html"{% if page.url contains "diseno" %} class="activo"{% endif %}>Diseño</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+{{ content }}
+</main>
+
+<footer class="pie">
+  <strong>BiblioStock</strong> &middot; Ingeniería de Software
+</footer>
+
+</body>
+</html>
