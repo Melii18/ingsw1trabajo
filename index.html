@@ -4,133 +4,307 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BiblioStock · Trabajo Práctico Integrador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f5f7fb; --card: #ffffff; --text: #1f2937; --muted: #6b7280;
-    --accent: #2563eb; --accent-soft: #dbeafe; --border: #e5e7eb;
+    --bg: #f7f3ea;
+    --paper: #fffdf8;
+    --ink: #2b2620;
+    --muted: #6f655a;
+    --rule: #e3dacb;
+    --accent: #7a2e2e;
+    --accent-ink: #fffdf8;
+    --green: #2f5d4a;
+    --green-soft: #e3ece6;
+    --amber: #8a5a14;
+    --amber-soft: #f4e8d2;
+    --grey-soft: #ece6dc;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0f172a; --card: #1e293b; --text: #e5e7eb; --muted: #9ca3af;
-      --accent: #60a5fa; --accent-soft: #1e3a5f; --border: #334155;
+      --bg: #1b1916;
+      --paper: #24211d;
+      --ink: #ece5d8;
+      --muted: #a89d8e;
+      --rule: #3a352e;
+      --accent: #d9a6a0;
+      --accent-ink: #1b1916;
+      --green: #9cc7b2;
+      --green-soft: #26362f;
+      --amber: #e2bf84;
+      --amber-soft: #3a3020;
+      --grey-soft: #302c26;
     }
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
   }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  /* Encabezado */
   header {
-    background: linear-gradient(135deg, #1d4ed8, #7c3aed);
-    color: #fff; text-align: center; padding: 3.5rem 1.25rem 3rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
   }
-  header h1 { margin: 0 0 .4rem; font-size: clamp(2rem, 6vw, 3rem); }
-  header p { margin: .25rem 0; opacity: .95; }
-  .badge {
-    display: inline-block; margin: .8rem .25rem 0; padding: .25rem .8rem;
-    border-radius: 999px; background: rgba(255,255,255,.2); font-size: .85rem;
+  .masthead {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 4.5rem 1.25rem 3.5rem;
+    text-align: center;
   }
-  main { max-width: 900px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+  .eyebrow {
+    margin: 0 0 1.1rem;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  header h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2.8rem, 9vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: .01em;
+  }
+  .ornament {
+    width: 72px;
+    height: 1px;
+    background: var(--accent);
+    margin: 1.6rem auto;
+    position: relative;
+  }
+  .ornament::after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 7px; height: 7px;
+    background: var(--paper);
+    border: 1px solid var(--accent);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .lead {
+    margin: 0 auto;
+    max-width: 34rem;
+    font-family: var(--serif);
+    font-size: clamp(1.25rem, 3.4vw, 1.5rem);
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* Contenido */
+  main { max-width: 880px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
   section {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 1.5rem; margin-top: 1.25rem;
+    padding: 2.6rem 0;
+    border-bottom: 1px solid var(--rule);
   }
-  h2 { margin-top: 0; font-size: 1.35rem; }
+  section:last-child { border-bottom: 0; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .num {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--accent);
+    min-width: 1.6rem;
+  }
+  h2 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+    line-height: 1.15;
+  }
+  p { margin: 0 0 1rem; }
   .note {
-    background: var(--accent-soft); border-left: 4px solid var(--accent);
-    padding: .8rem 1rem; border-radius: 8px; margin: 1rem 0;
+    margin: 1.4rem 0;
+    padding: .9rem 1.1rem;
+    border-left: 2px solid var(--accent);
+    background: var(--paper);
+    color: var(--muted);
+    font-size: .95rem;
   }
   .btn {
-    display: inline-block; background: var(--accent); color: #fff;
-    padding: .55rem 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600;
+    display: inline-block;
+    padding: .65rem 1.3rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: background .15s, color .15s;
   }
-  a { color: var(--accent); }
+  .btn:hover { background: var(--accent); color: var(--accent-ink); }
+
+  /* Tablas */
   .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--border); }
-  th { font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
-  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-  .pill {
-    display: inline-block; padding: .15rem .6rem; border-radius: 999px;
-    font-size: .8rem; font-weight: 600;
+  th, td {
+    text-align: left;
+    padding: .9rem .75rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: middle;
   }
-  .wip { background: #fef3c7; color: #92400e; }
-  .pending { background: var(--border); color: var(--muted); }
-  .done { background: #dcfce7; color: #166534; }
-  footer { text-align: center; color: var(--muted); padding: 1.5rem 1rem 2.5rem; font-size: .9rem; }
+  th {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--ink);
+  }
+  td:first-child, th:first-child { padding-left: 0; }
+  .doc-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; }
+  .doc-name small {
+    display: block;
+    font-family: var(--sans);
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .muted { color: var(--muted); }
+
+  .status {
+    display: inline-block;
+    padding: .15rem .65rem;
+    font-size: .74rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .done { background: var(--green-soft); color: var(--green); }
+  .wip { background: var(--amber-soft); color: var(--amber); }
+  .pending { background: var(--grey-soft); color: var(--muted); }
+
+  /* Metodología */
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 1.6rem 0;
+  }
+  .pillar { border-top: 1px solid var(--accent); padding-top: .9rem; }
+  .pillar h3 {
+    margin: 0 0 .4rem;
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .pillar p { margin: 0; font-size: .95rem; color: var(--muted); }
+  .method { font-family: var(--serif); font-size: 1.3rem; font-style: italic; }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    padding: 2rem 1.25rem 2.6rem;
+    font-size: .85rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+  footer strong { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .masthead { padding: 3.2rem 1rem 2.6rem; }
+    section { padding: 2rem 0; }
+    .stack thead { display: none; }
+    .stack, .stack tbody, .stack tr, .stack td { display: block; width: 100%; }
+    .stack tr { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+    .stack td { padding: .15rem 0; border: 0; }
+    .stack td.inline { display: inline-block; width: auto; margin: .4rem 1rem 0 0; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>📚 BiblioStock</h1>
-  <p><strong>Trabajo Práctico Integrador · Ingeniería de Software</strong></p>
-  <p>Un sistema de control de stock para la Biblioteca Municipal de Piribebuy</p>
-  <span class="badge">Análisis y diseño de software</span>
-  <span class="badge">Cliente real</span>
+  <div class="masthead">
+    <p class="eyebrow">Trabajo Práctico Integrador &middot; Ingeniería de Software</p>
+    <h1>BiblioStock</h1>
+    <div class="ornament" aria-hidden="true"></div>
+    <p class="lead">Sistema de control de stock para la Biblioteca Municipal de Piribebuy</p>
+  </div>
 </header>
 
 <main>
 
   <section>
-    <h2>👋 Bienvenida</h2>
+    <div class="section-head"><span class="num">I</span><h2>Bienvenida</h2></div>
     <p>Este sitio contiene el <strong>análisis y diseño del sistema BiblioStock</strong>, desarrollado como Trabajo Práctico Integrador de la asignatura <strong>Ingeniería de Software</strong>.</p>
-    <div class="note">📌 Este sitio es la <strong>entrega oficial</strong> del trabajo. No se envían archivos impresos ni copias por otros medios.</div>
+    <div class="note">Este sitio es la entrega oficial del trabajo. No se envían archivos impresos ni copias por otros medios.</div>
     <a class="btn" href="https://github.com/Melii18/ingsw1trabajo">Ver repositorio en GitHub</a>
   </section>
 
   <section>
-    <h2>🗂️ Entregas</h2>
+    <div class="section-head"><span class="num">II</span><h2>Entregas</h2></div>
     <div class="table-wrap">
-      <table>
+      <table class="stack">
         <thead><tr><th>Entrega</th><th>Estado</th><th>Enlace</th></tr></thead>
         <tbody>
           <tr>
-            <td><strong>1. Conceptualización</strong></td>
-            <td><span class="pill done">✅ Entregado</span></td>
-           <td><a href="docs/conceptualizacion.html">Ver documento</a></td>
+            <td><span class="doc-name">1. Conceptualización<small>El problema, el propósito y el alcance</small></span></td>
+            <td class="inline"><span class="status done">Entregado</span></td>
+            <td class="inline"><a href="docs/conceptualizacion.html">Ver documento</a></td>
           </tr>
           <tr>
-            <td><strong>2. Análisis</strong></td>
-            <td><span class="pill pending">🔲 Pendiente</span></td>
-            <td>Próximamente</td>
+            <td><span class="doc-name">2. Análisis<small>Requisitos, casos de uso y modelo de dominio</small></span></td>
+            <td class="inline"><span class="status wip">En elaboración</span></td>
+            <td class="inline"><a href="docs/analisis.html">Ver documento</a></td>
           </tr>
           <tr>
-            <td><strong>3. Diseño</strong></td>
-            <td><span class="pill pending">🔲 Pendiente</span></td>
-            <td>Próximamente</td>
+            <td><span class="doc-name">3. Diseño<small>Arquitectura, clases de diseño y base de datos</small></span></td>
+            <td class="inline"><span class="status pending">Pendiente</span></td>
+            <td class="inline muted">Próximamente</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p style="color:var(--muted);font-size:.9rem;margin-bottom:0">Cada nueva entrega se suma a este sitio, conservando las anteriores.</p>
+    <p class="muted" style="font-size:.9rem;margin:1rem 0 0">Cada nueva entrega se suma a este sitio, conservando las anteriores.</p>
   </section>
 
   <section>
-    <h2>🏛️ Usuario / cliente real</h2>
+    <div class="section-head"><span class="num">III</span><h2>Usuario / cliente real</h2></div>
     <p><strong>Biblioteca Municipal de Piribebuy</strong>: institución pública que resguarda y ofrece libros a la comunidad.</p>
     <p>Hoy no cuenta con ningún sistema informático y gestiona su acervo con registros en <strong>pequeñas tarjetas</strong>. BiblioStock nace para ordenar ese inventario, agilizar las búsquedas y saber en todo momento qué libros hay y cuáles están disponibles.</p>
   </section>
 
   <section>
-    <h2>👩‍💻 Integrantes del grupo</h2>
+    <div class="section-head"><span class="num">IV</span><h2>Integrantes del grupo</h2></div>
     <div class="table-wrap">
-      <table>
+      <table class="stack">
         <thead><tr><th>Nombre completo</th><th>Rol / Responsabilidad</th><th>GitHub</th></tr></thead>
         <tbody>
           <tr>
-            <td><strong>Melisa Tillner</strong></td>
+            <td><span class="doc-name">Melisa Tillner</span></td>
             <td>Coordinación y contacto con el cliente</td>
             <td><a href="https://github.com/melii18">@melii18</a></td>
           </tr>
           <tr>
-            <td><strong>Marcelo Benitez</strong></td>
+            <td><span class="doc-name">Marcelo Benitez</span></td>
             <td>Responsable técnico (repositorio, sitio y tecnología)</td>
             <td><a href="https://github.com/themarce001">@themarce001</a></td>
           </tr>
           <tr>
-            <td><strong>Cesar Pereira</strong></td>
+            <td><span class="doc-name">Cesar Pereira</span></td>
             <td>Analista (requisitos y modelado)</td>
             <td><a href="https://github.com/by-rafael">@by-rafael</a></td>
           </tr>
@@ -140,19 +314,19 @@
   </section>
 
   <section>
-    <h2>🧭 Metodología de diseño y desarrollo</h2>
-    <p><strong>Design Thinking + UML, con iteraciones cortas y validación con el cliente.</strong></p>
+    <div class="section-head"><span class="num">V</span><h2>Metodología de diseño y desarrollo</h2></div>
+    <p class="method">Design Thinking + UML, con iteraciones cortas y validación con el cliente.</p>
     <div class="grid">
-      <div>
-        <strong>💡 Design Thinking</strong>
+      <div class="pillar">
+        <h3>Design Thinking</h3>
         <p>Entendemos cómo trabaja hoy la biblioteca y qué necesita realmente el personal, mediante entrevistas y observación, antes de definir qué construir.</p>
       </div>
-      <div>
-        <strong>📐 UML</strong>
+      <div class="pillar">
+        <h3>UML</h3>
         <p>Un lenguaje estándar para modelar el sistema (casos de uso, modelo de dominio, clases y secuencia) de forma clara y trazable.</p>
       </div>
-      <div>
-        <strong>🔁 Iteraciones cortas</strong>
+      <div class="pillar">
+        <h3>Iteraciones cortas</h3>
         <p>Cada entrega se valida con el cliente antes de avanzar a la siguiente, para corregir a tiempo y evitar malentendidos.</p>
       </div>
     </div>
@@ -162,7 +336,7 @@
 </main>
 
 <footer>
-   <strong>BiblioStock</strong> · Ingeniería de Software
+  <strong>BiblioStock</strong> &middot; Ingeniería de Software
 </footer>
 
 </body>
