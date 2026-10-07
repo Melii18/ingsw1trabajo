@@ -1,5 +1,5 @@
-title: "[Nombre del Sistema] — Trabajo Práctico Integrador"
-description: "Análisis y diseño de [nombre del sistema], desarrollado para [nombre del usuario/cliente]."
+title: "BiblioStock — Trabajo Práctico Integrador"
+description: "Análisis y diseño de BiblioStock, sistema de control de stock desarrollado para la Biblioteca Municipal de Piribebuy."
 theme: jekyll-theme-cayman
 
 # Este archivo le indica a GitHub Pages qué tema usar para que el sitio
