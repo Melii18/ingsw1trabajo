@@ -13,31 +13,31 @@ layout: default
 
 ## 1. Presentación del proyecto
 
-**Nombre del sistema:** [Bibliostock]
+**Nombre del sistema:** BiblioStock
 
 **Integrantes del grupo:**
 
 | Nombre | Rol |
 |---|---|
-| [Melisa Tillner] | [Coordinación y contacto con el cliente / documentación] |
-| [Cesar Pereira] | [Analista: requisitos y modelado] |
-| [Marcelo Benitez] | [Responsable técnico: repositorio, sitio y tecnología] |
+| Melisa Tillner | Coordinación y contacto con el cliente / documentación |
+| Cesar Pereira | Analista: requisitos y modelado |
+| Marcelo Benitez | Responsable técnico: repositorio, sitio y tecnología |
 
-**Usuario / cliente real:** [Biblioteca Municipal de la ciudad de Piribebuy (Departamento de Cordillera, Paraguay), institución pública que resguarda y ofrece libros a la comunidad. Actualmente no cuenta con ningún sistema informático y gestiona su acervo con registros en pequeñas tarjetas. Referente: Jaime Valenzuela]
+**Usuario / cliente real:** Biblioteca Municipal de la ciudad de Piribebuy (Departamento de Cordillera, Paraguay), institución pública que resguarda y ofrece libros a la comunidad. Actualmente no cuenta con ningún sistema informático y gestiona su acervo con registros en pequeñas tarjetas. Referente: Jaime Valenzuela.
 
 ---
 
 ## 2. Definición del problema
 
-[La Biblioteca Municipal de Piribebuy registra la información de cada libro en pequeñas tarjetas físicas, que se consultan y actualizan a mano. No existe ningún sistema de control de stock.
+La Biblioteca Municipal de Piribebuy registra la información de cada libro en pequeñas tarjetas físicas, que se consultan y actualizan a mano. No existe ningún sistema de control de stock.
 
 Para saber si tienen un libro, el personal debe revisar las tarjetas una por una. Las dificultades que enfrenta son:
 
-Búsqueda lenta: encontrar un libro por título, autor o tema lleva tiempo.
-Stock desconocido: no se sabe con rapidez cuántos ejemplares existen, cuántos están disponibles y cuántos prestados.
-Riesgo de pérdida: las tarjetas pueden extraviarse o deteriorarse, y no hay copia de respaldo.
-Errores e inconsistencias: la escritura manual favorece duplicados y datos desactualizados o incompletos.
-Sin trazabilidad ni estadísticas: es difícil saber quién tiene un libro, qué préstamos están vencidos o qué libros son los más pedidos.]
+- **Búsqueda lenta:** encontrar un libro por título, autor o tema lleva tiempo.
+- **Stock desconocido:** no se sabe con rapidez cuántos ejemplares existen, cuántos están disponibles y cuántos prestados.
+- **Riesgo de pérdida:** las tarjetas pueden extraviarse o deteriorarse, y no hay copia de respaldo.
+- **Errores e inconsistencias:** la escritura manual favorece duplicados y datos desactualizados o incompletos.
+- **Sin trazabilidad ni estadísticas:** es difícil saber quién tiene un libro, qué préstamos están vencidos o qué libros son los más pedidos.
 
 ---
 
@@ -49,13 +49,13 @@ Desarrollar un sistema web de control de stock que permita registrar, consultar 
 
 **Objetivos específicos:**
 
-1- Registrar el catálogo de libros (alta, modificación y baja) con sus datos bibliográficos, de modo que cada tarjeta actual pueda cargarse en el sistema.
-2- Controlar la cantidad de ejemplares de cada libro y su estado (disponible, prestado, dañado o perdido), mostrando el stock total y el disponible.
-3- Permitir búsquedas por título, autor, categoría o código, con resultados en pocos segundos.
-4- Registrar préstamos y devoluciones con fecha límite, guardando fecha, socio y ejemplar de cada movimiento.
-5- Generar reportes básicos: inventario, préstamos vencidos y libros más solicitados.
-6- Migrar al sistema la información existente en las tarjetas.
-7- Restringir el acceso mediante usuarios y roles, de modo que solo personal autorizado modifique datos.
+1. Registrar el catálogo de libros (alta, modificación y baja) con sus datos bibliográficos, de modo que cada tarjeta actual pueda cargarse en el sistema.
+2. Controlar la cantidad de ejemplares de cada libro y su estado (disponible, prestado, dañado o perdido), mostrando el stock total y el disponible.
+3. Permitir búsquedas por título, autor, categoría o código, con resultados en pocos segundos.
+4. Registrar préstamos y devoluciones con fecha límite, guardando fecha, socio y ejemplar de cada movimiento.
+5. Generar reportes básicos: inventario, préstamos vencidos y libros más solicitados.
+6. Migrar al sistema la información existente en las tarjetas.
+7. Restringir el acceso mediante usuarios y roles, de modo que solo personal autorizado modifique datos.
 
 ---
 
@@ -63,24 +63,24 @@ Desarrollar un sistema web de control de stock que permita registrar, consultar 
 
 **Incluye (dentro del alcance):**
 
-1- Gestión de libros (título, autor, editorial, año, ISBN, categoría, ubicación en estantería).
-2- Gestión de ejemplares y control de stock (cantidad, estado y disponibilidad).
-3- Gestión de autores, editoriales y categorías.
-4- Gestión de socios/lectores con datos básicos.
-5- Registro de préstamos y devoluciones.
-6- Búsqueda y consulta del catálogo.
-Reportes básicos.
-7- Usuarios y roles (administrador y bibliotecario).
-Carga inicial del catálogo (formulario ágil o importación 8- desde planilla).
-_______________________________
-No incluye (fuera de alcance):
-_______________________________
-*Cobro de multas y gestión contable.
-*Préstamo interbibliotecario.
-*Catálogo en línea público para lectores externos.
-*Lector de código de barras o etiquetas RFID.
-*Aplicación móvil nativa.
-*Digitalización automática (OCR) de las tarjetas existentes.]
+1. Gestión de libros (título, autor, editorial, año, ISBN, categoría, ubicación en estantería).
+2. Gestión de ejemplares y control de stock (cantidad, estado y disponibilidad).
+3. Gestión de autores, editoriales y categorías.
+4. Gestión de socios/lectores con datos básicos.
+5. Registro de préstamos y devoluciones.
+6. Búsqueda y consulta del catálogo.
+7. Reportes básicos.
+8. Usuarios y roles (administrador y bibliotecario).
+9. Carga inicial del catálogo (formulario ágil o importación desde planilla).
+
+**No incluye (fuera de alcance):**
+
+- Cobro de multas y gestión contable.
+- Préstamo interbibliotecario.
+- Catálogo en línea público para lectores externos.
+- Lector de código de barras o etiquetas RFID.
+- Aplicación móvil nativa.
+- Digitalización automática (OCR) de las tarjetas existentes.
 
 ---
 
