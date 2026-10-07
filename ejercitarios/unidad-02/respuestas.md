@@ -30,27 +30,20 @@ _Respuesta:_
 
 **3. Piensa en un sistema cotidiano (por ejemplo, una biblioteca, un supermercado o un club deportivo) y completa la tabla con un ejemplo propio para cada propiedad.**
 
+Sistema elegido: Supermercado
+
 | Propiedad | Ejemplo en el sistema elegido |
 |---|---|
-| Jerarquía | |
-| Límites (fronteras) | |
-| Interrelación de elementos | |
-| Propiedades emergentes | |
+| Jerarquía | El supermercado forma parte de una organización comercial y, dentro de él, existen áreas como cajas, depósito, administración y atención al cliente. |
+| Límites (fronteras) | El sistema incluye las instalaciones, empleados, productos, cajas y procesos del supermercado, pero no incluye directamente a otros comercios. |
+| Interrelación de elementos | Los empleados, cajas, productos, sistema de inventario y clientes se relacionan para realizar las ventas y controlar el stock. |
+| Propiedades emergentes | El funcionamiento coordinado de todas las áreas permite ofrecer un servicio de compra organizado y mantener el control de los productos. |
 
 **4. Dentro del mismo sistema, identifica un posible subsistema y justifica por qué lo consideras tal.**
 
-_Respuesta:_ Sistema elegido: Supermercado
-
-Jerarquía: El supermercado forma parte de una organización comercial y, dentro de él, existen áreas como cajas, depósito, administración y atención al cliente.
-
-Límites (fronteras): El sistema incluye las instalaciones, empleados, productos, cajas y procesos del supermercado, pero no incluye directamente a otros comercios.
-
-Interrelación de elementos: Los empleados, cajas, productos, sistema de inventario y clientes se relacionan para realizar las ventas y controlar el stock.
-
-Propiedades emergentes: El funcionamiento coordinado de todas las áreas permite ofrecer un servicio de compra organizado y mantener el control de los productos.
-
-Un posible subsistema es el sistema de control de inventario, porque forma parte del supermercado y tiene elementos y procesos propios. 
+_Respuesta:_ Un posible subsistema es el sistema de control de inventario, porque forma parte del supermercado y tiene elementos y procesos propios. 
 Se encarga de registrar los productos disponibles, las entradas y salidas de mercadería y las cantidades existentes, contribuyendo al funcionamiento del sistema principal.
+
 ---
 
 ## Tema 2 · Los sistemas y su entorno
