@@ -44,7 +44,12 @@ La ingeniería de requisitos es todo el proceso utilizado para descubrir, analiz
 
 **5. Elegí un sistema que conozcas (una app, una plataforma, un sistema de tu universidad o trabajo) y da un ejemplo propio de un requerimiento funcional y uno no funcional para ese mismo sistema.**
 
-_Respuesta:_
+_Respuesta:_ Sistema elegido: el sistema académico web de la universidad, donde los alumnos consultan notas e inscripciones.
+
+- **Requerimiento funcional:** "El sistema debe permitir que el alumno se inscriba a las materias del semestre y descargue el comprobante de inscripción en PDF."
+- **Requerimiento no funcional:** "El sistema debe soportar al menos 500 alumnos conectados al mismo tiempo durante el período de inscripciones, mostrando cada página en menos de 3 segundos."
+
+El primero describe un servicio concreto que el sistema realiza (qué hace), mientras que el segundo restringe cómo debe comportarse (rendimiento y capacidad) y se puede verificar con una prueba de carga.
 
 
 ---
@@ -121,6 +126,7 @@ El problema es que es costosa, lleva mucho tiempo y necesita gente especializada
 
 En el sistema de control de stock de la biblioteca no se justificaría, porque un error (por ejemplo, un stock mal calculado) se puede corregir sin consecuencias graves, y el costo de una especificación formal sería mucho mayor que el beneficio.
 Ejemplo hipotético donde sí la usaría: el software que controla una bomba de insulina, que calcula y aplica la dosis al paciente. Usaría una especificación formal para definir exactamente cuándo se puede aplicar una dosis, cuál es la dosis máxima permitida y qué pasa si falla un sensor, porque un error en esa lógica podría poner en riesgo la vida del paciente.
+
 ---
 
 ## Tema 7 · Prototipado de los requerimientos
