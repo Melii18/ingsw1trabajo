@@ -83,6 +83,7 @@ se van sumando partes: control de vencimientos, reportes de ganancias, facturaci
 
 Además, lo desarrollo prácticamente solo, así que hacer todo de una vez no sería realista. Cascada no me serviría porque los requisitos fueron apareciendo a medida que usaba el sistema (por ejemplo, al principio no pensé en los recordatorios de vencimiento). 
 El espiral tampoco, porque es demasiado pesado para un proyecto de este tamaño y con este nivel de riesgo.
+
 ---
 
 ## Tema 3 · Iteración de procesos
@@ -161,6 +162,7 @@ Contexto: un desarrollador arma sistemas web a medida para pequeños negocios cu
 Problema: cada vez que entrega una parte, el cliente dice que "no era así lo que quería", y hay que rehacer pantallas y lógica varias veces.
 Solución: antes de programar cada módulo, armar una maqueta rápida de las pantallas (en papel, en Figma o una página simple sin lógica), mostrarla al cliente y pedir su aprobación. Recién ahí se programa.
 Resultado: los requisitos quedan validados antes de invertir tiempo en el desarrollo y se reducen mucho los retrabajos.
+
 ---
 
 ## Tema 6 · Ayuda automatizada al proceso
