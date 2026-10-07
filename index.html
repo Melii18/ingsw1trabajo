@@ -7,247 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #f7f3ea;
-    --paper: #fffdf8;
-    --ink: #2b2620;
-    --muted: #6f655a;
-    --rule: #e3dacb;
-    --accent: #7a2e2e;
-    --accent-ink: #fffdf8;
-    --green: #2f5d4a;
-    --green-soft: #e3ece6;
-    --amber: #8a5a14;
-    --amber-soft: #f4e8d2;
-    --grey-soft: #ece6dc;
-    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #1b1916;
-      --paper: #24211d;
-      --ink: #ece5d8;
-      --muted: #a89d8e;
-      --rule: #3a352e;
-      --accent: #d9a6a0;
-      --accent-ink: #1b1916;
-      --green: #9cc7b2;
-      --green-soft: #26362f;
-      --amber: #e2bf84;
-      --amber-soft: #3a3020;
-      --grey-soft: #302c26;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.65;
-  }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { text-decoration-thickness: 2px; }
-
-  /* Encabezado */
-  header {
-    border-bottom: 1px solid var(--rule);
-    background: var(--paper);
-  }
-  .masthead {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 4.5rem 1.25rem 3.5rem;
-    text-align: center;
-  }
-  .eyebrow {
-    margin: 0 0 1.1rem;
-    font-size: .78rem;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  header h1 {
-    margin: 0;
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: clamp(2.8rem, 9vw, 4.4rem);
-    line-height: 1;
-    letter-spacing: .01em;
-  }
-  .title-row {
-    display: inline-flex;
-    align-items: center;
-    gap: clamp(.7rem, 2.5vw, 1.2rem);
-  }
-  .book {
-    width: clamp(52px, 11vw, 78px);
-    height: auto;
-    flex-shrink: 0;
-    color: var(--accent);
-  }
-  .ornament {
-    width: 72px;
-    height: 1px;
-    background: var(--accent);
-    margin: 1.6rem auto;
-    position: relative;
-  }
-  .ornament::after {
-    content: "";
-    position: absolute;
-    left: 50%; top: 50%;
-    width: 7px; height: 7px;
-    background: var(--paper);
-    border: 1px solid var(--accent);
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  .lead {
-    margin: 0 auto;
-    max-width: 34rem;
-    font-family: var(--serif);
-    font-size: clamp(1.25rem, 3.4vw, 1.5rem);
-    font-style: italic;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-
-  /* Contenido */
-  main { max-width: 880px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
-  section {
-    padding: 2.6rem 0;
-    border-bottom: 1px solid var(--rule);
-  }
-  section:last-child { border-bottom: 0; }
-  .section-head {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 1.2rem;
-  }
-  .num {
-    font-family: var(--serif);
-    font-size: 1rem;
-    color: var(--accent);
-    min-width: 1.6rem;
-  }
-  h2 {
-    margin: 0;
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: clamp(1.6rem, 4.5vw, 2rem);
-    line-height: 1.15;
-  }
-  p { margin: 0 0 1rem; }
-  .note {
-    margin: 1.4rem 0;
-    padding: .9rem 1.1rem;
-    border-left: 2px solid var(--accent);
-    background: var(--paper);
-    color: var(--muted);
-    font-size: .95rem;
-  }
-  .btn {
-    display: inline-block;
-    padding: .65rem 1.3rem;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    text-decoration: none;
-    font-size: .85rem;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    transition: background .15s, color .15s;
-  }
-  .btn:hover { background: var(--accent); color: var(--accent-ink); }
-
-  /* Tablas */
-  .table-wrap { overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td {
-    text-align: left;
-    padding: .9rem .75rem;
-    border-bottom: 1px solid var(--rule);
-    vertical-align: middle;
-  }
-  th {
-    font-size: .72rem;
-    font-weight: 600;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    border-bottom: 1px solid var(--ink);
-  }
-  td:first-child, th:first-child { padding-left: 0; }
-  .doc-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; }
-  .doc-name small {
-    display: block;
-    font-family: var(--sans);
-    font-size: .8rem;
-    font-weight: 400;
-    color: var(--muted);
-  }
-  .muted { color: var(--muted); }
-
-  .status {
-    display: inline-block;
-    padding: .15rem .65rem;
-    font-size: .74rem;
-    font-weight: 600;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .done { background: var(--green-soft); color: var(--green); }
-  .wip { background: var(--amber-soft); color: var(--amber); }
-  .pending { background: var(--grey-soft); color: var(--muted); }
-
-  /* Metodología */
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    margin: 1.6rem 0;
-  }
-  .pillar { border-top: 1px solid var(--accent); padding-top: .9rem; }
-  .pillar h3 {
-    margin: 0 0 .4rem;
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-  .pillar p { margin: 0; font-size: .95rem; color: var(--muted); }
-  .method { font-family: var(--serif); font-size: 1.3rem; font-style: italic; }
-
-  footer {
-    border-top: 1px solid var(--rule);
-    text-align: center;
-    padding: 2rem 1.25rem 2.6rem;
-    font-size: .85rem;
-    color: var(--muted);
-    letter-spacing: .04em;
-  }
-  footer strong { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); }
-
-  @media (max-width: 600px) {
-    body { font-size: 16px; }
-    .masthead { padding: 3.2rem 1rem 2.6rem; }
-    section { padding: 2rem 0; }
-    .stack thead { display: none; }
-    .stack, .stack tbody, .stack tr, .stack td { display: block; width: 100%; }
-    .stack tr { padding: .9rem 0; border-bottom: 1px solid var(--rule); }
-    .stack td { padding: .15rem 0; border: 0; }
-    .stack td.inline { display: inline-block; width: auto; margin: .4rem 1rem 0 0; }
-  }
-</style>
+<link rel="stylesheet" href="assets/estilo.css">
 </head>
 <body>
 
-<header>
+<header class="portada">
   <div class="masthead">
     <p class="eyebrow">Trabajo Práctico Integrador &middot; Ingeniería de Software</p>
     <div class="title-row">
@@ -264,7 +28,7 @@
   </div>
 </header>
 
-<main>
+<main class="portada">
 
   <section>
     <div class="section-head"><span class="num">I</span><h2>Bienvenida</h2></div>
@@ -273,31 +37,38 @@
     <a class="btn" href="https://github.com/Melii18/ingsw1trabajo">Ver repositorio en GitHub</a>
   </section>
 
-  <section>
+  <section class="destacada">
     <div class="section-head"><span class="num">II</span><h2>Entregas</h2></div>
-    <div class="table-wrap">
-      <table class="stack">
-        <thead><tr><th>Entrega</th><th>Estado</th><th>Enlace</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><span class="doc-name">1. Conceptualización<small>El problema, el propósito y el alcance</small></span></td>
-            <td class="inline"><span class="status done">Entregado</span></td>
-            <td class="inline"><a href="docs/conceptualizacion.html">Ver documento</a></td>
-          </tr>
-          <tr>
-            <td><span class="doc-name">2. Análisis<small>Requisitos, casos de uso y modelo de dominio</small></span></td>
-            <td class="inline"><span class="status wip">En elaboración</span></td>
-            <td class="inline"><a href="docs/analisis.html">Ver documento</a></td>
-          </tr>
-          <tr>
-            <td><span class="doc-name">3. Diseño<small>Arquitectura, clases de diseño y base de datos</small></span></td>
-            <td class="inline"><span class="status pending">Pendiente</span></td>
-            <td class="inline muted">Próximamente</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="cards">
+      <article class="card">
+        <span class="kicker">Entrega 1</span>
+        <h3>Conceptualización</h3>
+        <p>El problema, el propósito y el alcance del proyecto.</p>
+        <div class="foot">
+          <span class="status done">Entregado</span>
+          <a class="btn solid" href="docs/conceptualizacion.html">Ver documento</a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="kicker">Entrega 2</span>
+        <h3>Análisis</h3>
+        <p>Requisitos, casos de uso y modelo de dominio.</p>
+        <div class="foot">
+          <span class="status wip">En elaboración</span>
+          <a class="btn solid" href="docs/analisis.html">Ver documento</a>
+        </div>
+      </article>
+      <article class="card">
+        <span class="kicker">Entrega 3</span>
+        <h3>Diseño</h3>
+        <p>Arquitectura, clases de diseño y base de datos.</p>
+        <div class="foot">
+          <span class="status pending">Pendiente</span>
+          <span class="btn disabled">Próximamente</span>
+        </div>
+      </article>
     </div>
-    <p class="muted" style="font-size:.9rem;margin:1rem 0 0">Cada nueva entrega se suma a este sitio, conservando las anteriores.</p>
+    <p class="muted" style="font-size:.9rem;margin:1.2rem 0 0">Cada nueva entrega se suma a este sitio, conservando las anteriores.</p>
   </section>
 
   <section>
@@ -354,7 +125,7 @@
 
 </main>
 
-<footer>
+<footer class="pie">
   <strong>BiblioStock</strong> &middot; Ingeniería de Software
 </footer>
 
