@@ -1,0 +1,211 @@
+' Fuentes PlantUML de los diagramas de la Entrega 2 (Análisis).
+' Se pueden editar y ver en https://www.plantuml.com/plantuml/ o con la extensión PlantUML de VS Code.
+
+@startuml casos-de-uso
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #EEF4FF
+  BorderColor #3B5BA9
+}
+actor "Bibliotecario" as B
+actor "Administrador" as A
+A -|> B
+
+rectangle "Sistema BiblioStock" {
+  usecase "CU-01 Iniciar sesión" as CU01
+  usecase "CU-02 Gestionar libros" as CU02
+  usecase "CU-03 Gestionar ejemplares\ny stock" as CU03
+  usecase "CU-04 Gestionar autores,\neditoriales y categorías" as CU04
+  usecase "CU-05 Gestionar socios" as CU05
+  usecase "CU-06 Buscar en el catálogo" as CU06
+  usecase "CU-07 Registrar préstamo" as CU07
+  usecase "CU-08 Registrar devolución" as CU08
+  usecase "CU-09 Generar reportes" as CU09
+  usecase "CU-10 Gestionar usuarios\ny roles" as CU10
+  usecase "CU-11 Cargar catálogo inicial" as CU11
+  usecase "CU-12 Generar respaldo" as CU12
+}
+
+B --> CU01
+B --> CU02
+B --> CU03
+B --> CU04
+B --> CU05
+B --> CU06
+B --> CU07
+B --> CU08
+B --> CU09
+B --> CU11
+A --> CU10
+A --> CU12
+
+CU07 ..> CU06 : <<include>>
+CU08 ..> CU06 : <<include>>
+CU03 ..> CU06 : <<include>>
+@enduml
+
+@startuml modelo-dominio
+hide methods
+hide circle
+skinparam shadowing false
+skinparam classBackgroundColor #EEF4FF
+skinparam classBorderColor #3B5BA9
+
+class Libro {
+  titulo
+  isbn [0..1]
+  anioPublicacion
+  descripcion
+}
+class Autor {
+  nombre
+}
+class Editorial {
+  nombre
+}
+class Categoria {
+  nombre
+}
+class Ejemplar {
+  codigo
+  ubicacion
+  estado
+  fechaAlta
+}
+class Socio {
+  ci
+  nombre
+  apellido
+  telefono
+  direccion
+  fechaAlta
+}
+class Prestamo {
+  fechaPrestamo
+  fechaLimite
+  fechaDevolucion [0..1]
+}
+class Usuario {
+  nombreUsuario
+  nombre
+  rol
+}
+class Movimiento {
+  fecha
+  tipo
+  motivo
+}
+
+Libro "1..*" -- "1..*" Autor : escrito por >
+Libro "*" -- "0..1" Editorial : publicado por >
+Libro "*" -- "1" Categoria : pertenece a >
+Libro "1" -- "1..*" Ejemplar : tiene >
+Ejemplar "1" -- "*" Prestamo : se presta en >
+Socio "1" -- "*" Prestamo : retira >
+Usuario "1" -- "*" Prestamo : registra >
+Ejemplar "1" -- "*" Movimiento : historial >
+Usuario "1" -- "*" Movimiento : realiza >
+@enduml
+
+@startuml secuencia-prestamo
+skinparam shadowing false
+skinparam sequenceParticipant underline false
+actor Bibliotecario as B
+participant "Sistema\nBiblioStock" as S
+
+B -> S : Buscar socio (CI o nombre)
+S --> B : Datos del socio y préstamos activos
+alt Socio con préstamos vencidos o en el límite
+  S --> B : Aviso: no puede retirar nuevos libros
+else Socio habilitado
+  B -> S : Buscar libro (título, autor o código)
+  S --> B : Ejemplares y su estado
+  B -> S : Seleccionar ejemplar disponible
+  S --> B : Fecha límite sugerida (plazo por defecto)
+  B -> S : Confirmar préstamo
+  S -> S : Registrar préstamo y\nmarcar ejemplar como PRESTADO
+  S --> B : Comprobante del préstamo
+end
+@enduml
+
+@startuml actividad-devolucion
+skinparam shadowing false
+start
+:Bibliotecario busca el ejemplar\n(código) o el socio;
+:Sistema muestra el préstamo activo;
+:Bibliotecario revisa el estado físico del ejemplar;
+if (¿El ejemplar está en buen estado?) then (sí)
+  :Sistema marca el ejemplar como DISPONIBLE;
+else (no)
+  :Bibliotecario indica DAÑADO\ny escribe el motivo;
+  :Sistema registra el movimiento\ny marca el ejemplar como DAÑADO;
+endif
+:Sistema registra la fecha de devolución;
+if (¿Se devolvió fuera de plazo?) then (sí)
+  :Sistema deja constancia del atraso\nen el historial del socio;
+else (no)
+endif
+:Sistema muestra la confirmación;
+stop
+@enduml
+
+@startsalt mockup-busqueda
+{+
+  {* Inicio | Catálogo | Préstamos | Socios | Reportes | Salir }
+  ==
+  <b>Buscar en el catálogo
+  { Buscar: | "Cien años de soledad      " | ^Título^ | [Buscar] }
+  .
+  {#
+    <b>Código | <b>Título | <b>Autor | <b>Categoría | <b>Stock | <b>Disponibles
+    L-0012 | Cien años de soledad | G. García Márquez | Novela | 3 | 2
+    L-0045 | Yo el Supremo | A. Roa Bastos | Novela | 2 | 0
+    L-0101 | Historia del Paraguay | Varios | Historia | 1 | 1
+  }
+  .
+  { [Ver ficha] | [Nuevo libro] | [Registrar préstamo] }
+}
+@endsalt
+
+@startsalt mockup-prestamo
+{+
+  {* Inicio | Catálogo | Préstamos | Socios | Reportes | Salir }
+  ==
+  <b>Registrar préstamo
+  .
+  { Socio (CI): | "4.123.456   " | [Buscar] }
+  { Nombre: | Ana Benítez | Préstamos activos: | 1 de 3 }
+  .
+  { Ejemplar (código): | "L-0012-02   " | [Buscar] }
+  { Libro: | Cien años de soledad | Estado: | DISPONIBLE }
+  .
+  { Fecha de préstamo: | 07/10/2026 }
+  { Fecha límite: | "14/10/2026" }
+  .
+  { [Cancelar] | [Confirmar préstamo] }
+}
+@endsalt
+
+@startsalt mockup-ficha-libro
+{+
+  {* Inicio | Catálogo | Préstamos | Socios | Reportes | Salir }
+  ==
+  <b>Ficha del libro
+  { Título: | "Cien años de soledad        " }
+  { Autor(es): | "Gabriel García Márquez      " }
+  { Editorial: | ^Sudamericana^ | Año: | "1967" }
+  { Categoría: | ^Novela^ | ISBN: | "                " }
+  .
+  <b>Ejemplares (stock total: 3, disponibles: 2)
+  {#
+    <b>Código | <b>Ubicación | <b>Estado
+    L-0012-01 | Estante A3 | PRESTADO
+    L-0012-02 | Estante A3 | DISPONIBLE
+    L-0012-03 | Estante A3 | DISPONIBLE
+  }
+  { [Agregar ejemplar] | [Cambiar estado] | [Guardar cambios] }
+}
+@endsalt
+
